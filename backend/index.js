@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 5000;
 
 //Middleware
 // app.use(cors({
-//   origin: 'http://localhost:3000', // Your frontend URL
+//   origin: 'https://gpt-website.onrender.com', // Your frontend URL
 //   credentials: true
 // }));
 app.use(cors());
