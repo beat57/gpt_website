@@ -10,7 +10,7 @@ const Header = () => {
   useEffect(() => {
     const checkAuthStatus = async () => {
       try {
-        const response = await axios.get('http://localhost:2000/api/auth/status', { withCredentials: true });
+        const response = await axios.get('https://gpt-website-backend.onrender.com/api/auth/status', { withCredentials: true });
         setIsLoggedIn(response.data.isLoggedIn);
       } catch (error) {
         console.error('Error checking auth status:', error);
@@ -22,7 +22,7 @@ const Header = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.post('http://localhost:2000/api/auth/logout', {}, { withCredentials: true });
+      await axios.post('https://gpt-website-backend.onrender.com/api/auth/logout', {}, { withCredentials: true });
       setIsLoggedIn(false);
       window.location.href = '/'; // Redirect to home page after logout
     } catch (error) {
