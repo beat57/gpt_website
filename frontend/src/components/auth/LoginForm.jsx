@@ -14,7 +14,7 @@ const LoginForm = () => {
     setError('');
 
     try {
-      const response = await axios.post('http://localhost:2000/api/auth/login', {
+      const response = await axios.post('https://gpt-website-backend.onrender.com/api/auth/login', {
         email,
         password,
       });
